@@ -1,0 +1,37 @@
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    div {
+        height: 500px;
+        width: 1000px;
+        background: pink;
+        border: 2px solid black;
+        overflow: auto; /* Add overflow auto to enable scrolling if PDF exceeds div size */
+    }
+</style>
+
+<div id="pdfContainer"></div>
+
+<a href="#" id="pdfLink">Click here to view the PDF</a>
+
+<script>
+    // Get the reference to the elements
+    var pdfContainer = document.getElementById('pdfContainer');
+    var pdfLink = document.getElementById('pdfLink');
+
+    // Add event listener to the link
+    pdfLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default behavior of the link
+
+        // Set the PDF URL
+        var pdfURL = 'https://drive.google.com/file/d/19f5CbLF3RSfvPa7NV8RZpPX5wkrCRbfA/preview';
+
+        // Load the PDF into the div
+        pdfContainer.innerHTML = '<iframe src="' + pdfURL + '" style="width:100%; height:100%; border:none;"></iframe>';
+    });
+</script>

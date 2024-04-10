@@ -1,23 +1,21 @@
 <style>
     body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+			margin:0;
+			padding:0;
     }
 
     div {
-        height: 500px;
-        width: 1000px;
+        height: 100%;
+        width: 100%;
         background: pink;
         border: 2px solid black;
         overflow: auto; /* Add overflow auto to enable scrolling if PDF exceeds div size */
     }
 </style>
 
-<div id="pdfContainer"></div>
 
 <a href="#" id="pdfLink">Click here to view the PDF</a>
+<div id="pdfContainer"></div>
 
 <script>
     // Get the reference to the elements
